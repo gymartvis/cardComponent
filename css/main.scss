@@ -1,0 +1,126 @@
+:root {
+// font
+--font-lexend-deca: 'Lexend Deca', sans-serif;
+--font-big-shoulders: 'Big Shoulders Display', cursive;
+// color
+--bright-orange: hsl(31, 77%, 52%);
+--dark-cyan: hsl(184, 100%, 22%);
+--very-dark-cyan: hsl(179, 100%, 13%);
+// (paragraphs)
+--transparent-white: hsla(0, 0%, 100%, 0.75); 
+// (background, headings, buttons)
+--very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: var(--very-light-gray);
+  font-size: 1.5rem;
+  font-family: var(--font-big-shoulders);
+} 
+
+h2 {
+  color: var(--very-light-gray);
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+p {
+  color: var(--transparent-white);
+}
+
+.parra {
+  margin: 2rem 0;
+}
+
+button {
+  background-color: var(--very-light-gray);
+  border: 1px solid var(--very-light-gray);
+  font-family: var(--font-lexend-deca);
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.container {
+  width: 26rem;
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 0; 
+
+  .card {
+    padding: 4rem 5rem;
+  }
+  .card-sedans {
+    background-color: var(--bright-orange);
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+    button {
+      color: var(--bright-orange);
+    }
+  }
+  .card-suvs {
+    background-color: var(--dark-cyan);
+    button {
+      color: var(--dark-cyan);
+    }
+  }
+  .card-luxury {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -ms-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+    button {
+      color: var(--very-dark-cyan);
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .parra {
+    height: 10rem;
+    margin-bottom: 7rem;
+  }      
+
+  .container {
+    width: auto;
+    flex-direction: row;
+    margin: 13rem auto;
+
+    .card {
+      width: 15rem;
+    }
+    .card-sedans {
+      border-radius: 10px 0 0 10px;
+      -webkit-border-radius: 10px 0 0 10px;
+      -moz-border-radius: 10px 0 0 10px;
+      -ms-border-radius: 10px 0 0 10px;
+      -o-border-radius: 10px 0 0 10px;
+    }
+    .card-luxury {
+      border-radius: 0 10px 10px 0;
+      -webkit-border-radius: 0 10px 10px 0;
+      -moz-border-radius: 0 10px 10px 0;
+      -ms-border-radius: 0 10px 10px 0;
+      -o-border-radius: 0 10px 10px 0;
+}
+  }
+}
